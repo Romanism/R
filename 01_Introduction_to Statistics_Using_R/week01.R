@@ -15,7 +15,7 @@
 # (3) comments can be put anywhere starting with #
 # (4) subsequent commands are made by + (더하기로 다음줄도 이어짐)
 
-# B. 내장 기능
+# B. 내장기능
 # (1) help, example, demo
 help(solve) # 도움말
 example(solve) # 예제
