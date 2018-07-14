@@ -14,3 +14,40 @@
 # 2) 순서형 자료 : 범주들이 순서의 개념을 가지는 자료 ex) 상(1), 중(2), 하(3)
 
 
+# 2.2 표와 그래프
+
+# 2.1.1 양적자료 : 히스토그램 (Histogram), 줄기-잎 그림
+# 1) 히스토그램 (Histogram)
+hist(faithful$waiting)
+
+# 2) 줄기-잎 그림
+stem(faithful$waiting)
+
+# 2.1.2 질적자료 : 도수분포표 (Frequency Table), 파이차트 (Pie Chart)
+# 1) 도수분포표 (Frequency Table)
+a <- rep('A', 1520) 
+b <- rep('B',770) 
+c <- rep('C',510)
+x <- c(a,b,c) # a,b,c로 구성되는 벡터를 생성
+table(x)
+
+y <- as.matrix(table(x)) # 행렬형태로 변환
+freq <- y[,1] # [,1] - column, [1,] - row
+relative_freq <- freq/sum(y)
+z <- cbind(freq, relative_freq); z# cbind - column들끼리 묶기
+
+# 2) 파이차트 (Pie Chart)
+x <- c(1520, 770, 510)
+lab <- c('A', 'B', 'C')
+y <- round(x/sum(x)*100, digits=1)
+w <- paste(lab, '(', y, '%', ')')
+pie(x, labels=w, main='Pie Chart')
+
+# 예제 : 30페이지로 이루어진 보고서에서 각 페이지당 오자의 개수
+x <- c(1,1,1,3,0,0,1,1,1,0,2,2,0,0,0,1,2,1,2,0,0,1,6,4,3,3,1,2,4,0) 
+y <- as.matrix(table(x))
+freq <- y[,1]
+rel_freq <- freq/sum(freq)
+csum <- cumsum(freq) # 누적도수
+c_rel_freq <- csum/sum(freq)
+z <- cbind(freq, rel_freq, csum, c_rel_freq); z
