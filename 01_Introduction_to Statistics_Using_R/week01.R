@@ -51,7 +51,7 @@ y <- c(x, 0, x); y
 15/7 # real
 15 %/% 7 # integer part
 15 %% 7 # reminder part
-sum((x-mean(x))^2)/(length(x)-1) # variance공식
+sum((x-mean(x))^2)/(length(x)-1) # variance 공식
 var(x) # variance
 sqrt(-17) # NAN (Not a Number)
 
@@ -66,7 +66,7 @@ s5 <- rep(x, each = 5); s5 # x원소를 각각 5번 반복 (1,1, 2,2, 3,3)
 # R에 내장되어 있는 자료 중 강좌에서 이용할 자료
 
 # 1. faithful
-# 자료설명 : 미국 Yellowstone 국립공원 내에 있는 여러 간헐천 중에서 Old Faithful Geyser 에서 수집된 자료로서 2개의 변수와 272개의 관측치로 구성 
+# 자료설명 : 미국 Yellowstone 국립공원 내에 있는 여러 간헐천 중 Old Faithful Geyser 에서 수집된 자료로서 2개의 변수와 272개의 관측치로 구성 
 # 변수 : eruptions (분출시간 (단위:분)), waiting (다음 분출될 때까지의 시간 (단위:분))
 
 # 2. Stackloss
