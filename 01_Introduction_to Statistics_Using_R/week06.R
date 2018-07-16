@@ -19,3 +19,17 @@
 # 5.1.3 모비율 p에 대한 점 추정치 phat의 성질
 # 임의 표본 X1, ..., Xn이 성공확률 p인 베르누이 시행을 따를 경우 p에 대한 점 추정치 역시 표본평균을 사용하며
 # X = sum(xi) ~ B(n, p)이므로 점 추정치는 phat = X/n
+
+
+# 5.2 구간추정|대표본
+
+# 모수 theta에 대한 (1-a)% (eks, 0<a<1)신뢰구간
+# P(L(theta_hat) < theta < U(theta_hat)) = 1 - a를 만족하는 구간 (L(theta_hat), U(theta_hat))
+# 참고 : 1 - a는 신뢰수준(level of confidence)이라 하며, 흔히 0.01, 0.05, 0.1을 가짐
+# a = 0.01 = 99% 신뢰구간
+# a = 0.05 = 95% 신뢰구간
+# a = 0.10 = 90% 신뢰구간
+
+# 일반적으로 모수 theta에 대한 점 추정치를 theta_hat이라 하면,
+# 모수 theta에 대한 100(1-a)%의 근사적 신뢰구간은
+# theta_hat ± Za/2*s.e.(theta_hat)으로 표현 가능
